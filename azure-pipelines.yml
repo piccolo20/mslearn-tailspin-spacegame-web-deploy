@@ -31,6 +31,14 @@ stages:
       inputs:
         versionSpec: '20.x'
 
+    - script: |
+        node --version
+        npm --version
+        which node
+        which npm
+        uname -a
+      displayName: 'Check Node and npm'
+
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
